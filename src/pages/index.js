@@ -5,10 +5,11 @@ import "../styles/style.css"
 function clickHandler(e) {
   e.target.classList.add('hinge');
 }
+if (typeof window !== 'undefined') {
 [].forEach.call(document.getElementsByClassName('chocolate'), function(el) {
   el.addEventListener('click', clickHandler, false);
 });
-
+}
 
 export default function Home() {
   return (
